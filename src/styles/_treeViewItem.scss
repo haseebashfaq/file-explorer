@@ -1,0 +1,85 @@
+.treeViewItem {
+  padding: 0 8px;
+  padding-left: 24px;
+  position: relative;
+
+  $root: &;
+
+  &__label {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      margin-right: 15px;
+      height: 35px;
+      width: 35px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__control {
+    position: absolute;
+    top: 16px;
+    left: -16px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    transition: 0.3s transform;
+
+    &--active {
+      transform: rotate(0)
+    }
+
+    &::before {
+      content: '';
+      border-top: 6px solid;
+      border-right: 6px solid transparent;
+      border-bottom: 0;
+      border-left: 6px solid transparent;
+      top: 12px;
+      position: relative;
+    }
+  }
+
+  &__list {
+    display: none;
+
+    &--expanded {
+      display: block;
+    }
+  }
+
+  &__contextMenu {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    display: none;
+
+    &--expanded {
+      display: block;
+    }
+  }
+
+  &__input {
+    padding: 2px 8px;
+    font-size: 14px;
+  }
+
+  &--folder {
+    #{$root}__label::before {
+      // background-image: url('https://img.icons8.com/nolan/64/000000/folder-invoices.png');
+      background-image: url('/images/folder.svg');
+    }
+  }
+
+  &--file {
+    #{$root}__label::before {
+      background-image: url('https://img.icons8.com/nolan/64/000000/file.png');
+    }
+  }
+}

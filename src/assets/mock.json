@@ -1,0 +1,29 @@
+{
+  "type": "folder",
+  "name": "Campaign Files",
+  "path": "/",
+  "items": [
+    {
+      "type": "folder",
+      "name": "Documents",
+      "items": [
+        {
+          "type": "folder",
+          "name": "Work"
+        },
+        {
+          "type": "file",
+          "name": "document.txt"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Pictures"
+    },
+    {
+      "type": "file",
+      "name": "notes.txt"
+    }
+  ]
+}
